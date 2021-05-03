@@ -51,6 +51,9 @@
     justify-content: center;
     flex-grow: 3;
 }
+.main-nav__button span {
+    padding: 10px;
+}
 
 .main_img {
     position: relative;
