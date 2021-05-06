@@ -61,73 +61,31 @@
 .header-nav__theme span {
     padding: 10px;
 }
-
-/*Styles for the presentation images using BEM*/
-
-.main-background {
-    position: relative;
-    width: 100%;
-    max-height: auto;
-}
-.main-background__img {
-    position: relative;
-    width: 100%;
-    display: flex;
-}
-.main-background__presentation {
-    display: flex;
-    flex-direction: row;
-    width: 70%;
-}
-#moving-img {
-    position: relative;
-    top: -150px;
-    left: 15%;
-}
-.main-background__presentation img {
-    width: 25%;
-    height: 345px;
-    object-fit: cover;
-    flex-grow: 1;
-}
-/*Styles for the presentation using BEM*/
-.main-presentation {
+/*Styles for the containers*/
+.main-container {
+    padding-top: 50px;
     padding-left: 8vw;
     padding-right: 8vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
-.main-presentation h1 {
-    font-family: sans-serif;
-}
-.main-presentation__description p{
-    text-align: justify;
-    text-justify: inter-word;
-}
-.main-presentation__projects {
+.main-container__square {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    margin: 10px;
+    padding-top: 20px;
+    justify-content: space-evenly;
+
 }
-.main-presentation__projects img {
+.square {
     width: 200px;
     height: 200px;
-    padding-left:25px;
-    padding-right: 25px;
+    background-color: #e5e5e5;
+    display: block;
+    position: relative;
+    border-radius: 10px;
 }
-.main-presentation__contact {
+.square span{
     display: flex;
-    flex-direction: row;
-}
-.main-presentation__contact img {
-    width: 75px;
-    height: 75px;
-    padding: 30px;
-}
-/*Styles for the footer using BEM*/
-.footer-wrapper {
-    width: 100%;
-    background-color: #14213d;
-    height: 80px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
