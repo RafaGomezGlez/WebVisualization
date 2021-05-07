@@ -26,7 +26,8 @@ function linechart() {
                 ],
                 borderWidth: 1
             }]
-        }
+        },
+       
     });
 }
 

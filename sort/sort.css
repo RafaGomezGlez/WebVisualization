@@ -66,6 +66,8 @@
 #myChart{
     width: 100%;
     height: 60vh;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
 .main-secondHead{
     width: 100%;
@@ -94,6 +96,33 @@
 }
 input {
     width: 8vw;
+}
+.main-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+#submit {
+    background-color: #bbb;
+    padding: .5m;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Oswald';
+    font-size: 18px;
+    text-decoration: none;
+    border: none;
+    width: 10vw;
+   }
+#submit:hover {
+    border: none;
+    background: #fca311;
+    box-shadow: 0px 0px 1px #777;
 }
 /*Styles for the footer using BEM*/
 .footer-wrapper {
