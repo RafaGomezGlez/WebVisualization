@@ -61,34 +61,43 @@
 .header-nav__theme span {
     padding: 10px;
 }
-/*Styles for the containers*/
-.main-container {
-    padding-top: 50px;
-    padding-left: 8vw;
-    padding-right: 8vw;
+
+/*Styles for the second header*/
+#myChart{
+    width: 100%;
+    height: 60vh;
 }
-.main-container__square {
+.main-secondHead{
+    width: 100%;
+    height: 4vh;
+    background-color: #14213d;
+}
+.main-secondHead__Nav{
     display: flex;
     flex-direction: row;
-    margin: 10px;
-    padding-top: 20px;
-    justify-content: space-evenly;
-
-}
-.square {
-    width: 200px;
-    height: 200px;
-    background-color: #e5e5e5;
-    display: block;
-    position: relative;
-    border-radius: 10px;
-}
-.square a{
-    display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 100%;
-    text-decoration: none;
-    font-size: 2rem;
-    font-family: 'Courier New', Courier, monospace;
+
+}
+.main-secondHead__Nav div {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    padding-left: 3vw;
+}
+.main-secondHead__form__label{
+    color: white;
+    font-size: .9rem;
+    padding-right: 1vw;
+}
+input {
+    width: 8vw;
+}
+/*Styles for the footer using BEM*/
+.footer-wrapper {
+    width: 100%;
+    background-color: #14213d;
+    height: 80px;
 }
