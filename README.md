@@ -7,3 +7,7 @@ The website will include:
 - Goals
 
 ## Home
+
+## Libraries used
+- chart js
+> npm install chart.js
