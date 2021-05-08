@@ -11,3 +11,4 @@ The website will include:
 ## Libraries used
 - chart js
 > npm install chart.js
+- Microsoft Azure
