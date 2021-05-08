@@ -27,17 +27,11 @@ function updateChart() {
     var quantityValue = document.getElementById("quantityNumbers").value;
     var delayValue = document.getElementById("delay").value;
 
-    var sortData = {
-        sort: sortValue,
-        quantity: quantityValue,
-        delay: delayValue,
-    };
     myChart.data.labels = generateLabelsFromTable(quantityValue);
     myChart.data.datasets.forEach((dataset) => {
         dataset.data = (randomData(quantityValue));
     });
 
-    console.log(myChart.data)
     myChart.update();
     
 }
