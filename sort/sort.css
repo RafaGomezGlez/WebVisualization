@@ -74,15 +74,14 @@
     height: 4vh;
     background-color: #14213d;
 }
-.main-secondHead__Nav{
+.main-secondHead__form{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-
 }
-.main-secondHead__Nav div {
+.main-secondHead__form div {
     display: flex;
     align-items: center;
     width: 30%;

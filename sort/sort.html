@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sort</title>
     <link rel="stylesheet" href="./sort.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.js"></script>
 </head>
 <body>
     <script src="./sort.js"></script>
@@ -32,36 +32,63 @@
     </header>
     <main>
         <div class="main-secondHead">
-            <form class="main-secondHead__Nav">
-                <div>
-                    <label for="sort-method" class="main-secondHead__form__label">Sort method</label>
-                    <select name="sort-method" id="sort-method">
+            <form class="main-secondHead__form">
+                <label for="sort-method" class="main-secondHead__form__label">Sort method</label>
+                    <select name = "main-secondHead__form" id="sort-method">
                         <option value="insertionSort"> Insertion Sort</option>
                         <option value="bubbleSort"> Bubble Sort</option>
                         <option value="mergeSort"> Merge Sort</option>
                         <option value="quickSort"> Quick Sort</option>
                     </select>
-                </div>
-                <div>
-                    <label for="quantityNumbers" class="main-secondHead__form__label"> Quantity of numbers</label>
-                    <input type="number">
-                </div>
-                <div>
-                    <label for="delay" class="main-secondHead__form__label"> Delay</label>
-                    <input type="number">
-                </div>
+                <label for="quantityNumbers" class="main-secondHead__form__label"> Quantity of numbers</label>
+                    <input type="number" id = "quantityNumbers">
+                <label for="delay" class="main-secondHead__form__label"> Delay</label>
+                    <input type="number" id = "delay">
             </form>
         </div>
+
         <canvas id="myChart"></canvas>
         <script>
-            linechart()
+            
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const xlabels = [];
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: generateLabelsFromTable(100),
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [1,2,3,4],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+            
+            });
+
         </script>
         
         <div class = "main-button">
-            <button id="submit">
+            <button id="submit" type="submit" value="Submit" onclick="updateChart()">
                 Sort
             </button>
         </div>
+        
     </main>
     
     <footer>
