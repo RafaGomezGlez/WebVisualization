@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* Styles for header section using BEM */
+.header-nav {
+    margin-top: 0px;
+    margin-left: 0;
+    list-style: none;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+}
+.header-nav__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.header-nav__list{
+    padding: 0;
+    margin: 0;
+    flex-grow: .2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.header-nav__list__item {
+    display: flex;
+}
+
+.header-nav__list__item a {
+    color: black;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.header-nav__list__item a:hover {
+    background-color:#fca311
+}
+.header-nav__list__item a:active {
+    color: red;
+}
+.header-nav__theme {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 3;
+}
+.header-nav__theme span {
+    padding: 10px;
+}
+/*Styles for the containers*/
+.main-container {
+    padding-top: 50px;
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+.main-container__square {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding-top: 20px;
+    justify-content: space-evenly;
+
+}
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: #e5e5e5;
+    display: block;
+    position: relative;
+    border-radius: 10px;
+}
+.square a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+}
