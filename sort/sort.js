@@ -21,7 +21,7 @@ function generateLabelsFromTable(quantity)
     return labels;
 }
 
-function updateChart() {
+function sendData() {
 
     var sortValue = (document.getElementById("sort-method").value);
     var quantityValue = document.getElementById("quantityNumbers").value;
@@ -33,15 +33,11 @@ function updateChart() {
         dataset.data = (randomData(quantityValue));
     });
 
-    var arrayData = myChart.data.datasets[0].data;
     myChart.update();
 
-    
     switch (sortValue) {
         case 'insertionSort':
-            console.log(sortValue)
-            console.log(arrayData)
-            console.log(insertionSort(arrayData))
+            setTimeout(()=> insertionSort(), 2000)
             break;
         case 'bubbleSort':
             console.log("Bubble sort")
@@ -57,8 +53,8 @@ function updateChart() {
     
 }
 
-function insertionSort(data) {
-
+function insertionSort() {
+    var data = myChart.data.datasets[0].data;
     var i;
     var j;
     for (i = 1; i < data.length ; i++)
@@ -70,10 +66,10 @@ function insertionSort(data) {
         {
             data[j + 1] = data[j];
             j = j - 1;
+            myChart.update()
         }
         data[j + 1] = key;
     }
     console.log(data)
-    myChart.update()
     return data;
 }
