@@ -1,4 +1,19 @@
 
+function swap(arr, i) {
+    let tmp = arr[i];
+    arr[i] = arr[i + 1];
+    arr[i + 1] = tmp;
+}
+
+function updateChartDelayed(labels, data, colors, timeout) {
+    setTimeout(() => {
+      myChart.data.labels = labels;
+      myChart.data.datasets[0].data = data;
+      myChart.data.datasets[0].backgroundColor = colors;
+      myChart.update();
+    }, timeout);
+  }
+
 function randomData(quantity) {
     let arr = []
     while (quantity > 0) {
@@ -21,7 +36,7 @@ function generateLabelsFromTable(quantity)
     return labels;
 }
 
-function updateChart() {
+function sendData() {
 
     var sortValue = (document.getElementById("sort-method").value);
     var quantityValue = document.getElementById("quantityNumbers").value;
@@ -33,47 +48,51 @@ function updateChart() {
         dataset.data = (randomData(quantityValue));
     });
 
-    var arrayData = myChart.data.datasets[0].data;
     myChart.update();
 
-    
     switch (sortValue) {
         case 'insertionSort':
-            console.log(sortValue)
-            console.log(arrayData)
-            console.log(insertionSort(arrayData))
+            setTimeout(()=> insertionSort(), 3000)
             break;
         case 'bubbleSort':
-            console.log("Bubble sort")
+            setTimeout(() => bubbleSort(), 3000)
             break
         case 'mergeSort':
-            console.log("Merge sort")
+            setTimeout(()=> mergeSort(), 3000)
             break
         case 'quickSort':
-            console.log("Quick sort")
+            setTimeout(()=> quickSort(), 3000)
             break
     }
 
     
 }
 
-function insertionSort(data) {
-
-    var i;
-    var j;
-    for (i = 1; i < data.length ; i++)
-    {
-        key = data[i];
-        j = i - 1;
- 
-        while (j >= 0 && data[j] > key)
-        {
-            data[j + 1] = data[j];
-            j = j - 1;
+function bubbleSort() {  
+    var labels = myChart.data.labels;
+    var data = myChart.data.datasets[0].data;
+    var colors = myChart.data.datasets[0].backgroundColor;
+    var swapped;
+    var timeout = 0;
+    do {
+      swapped = false;
+      for (var i = 0; i < data.length; i++) {
+        if (data[i] > data[i + 1]) {        
+          swap(labels, i);
+          swap(data, i);
+          swap(colors, i);
+          timeout += 500;
+          this.updateChartDelayed(labels.slice(0), data.slice(0), colors.slice(0), timeout);
+          swapped = true;
         }
-        data[j + 1] = key;
-    }
-    console.log(data)
-    myChart.update()
-    return data;
+      }
+    } while (swapped);
+  }
+
+function mergeSort(){
+    console.log("mergeSort")
+}
+
+function quickSort(){
+    console.log("quickSort")
 }
