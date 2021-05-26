@@ -1,69 +1,124 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@500&family=Shadows+Into+Light&family=Varela+Round&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <nav class="header-nav">
-            <div class="header-nav__logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 66.363 65.425">
-                    <path id="Icon_awesome-circle-notch" data-name="Icon awesome-circle-notch" d="M38.025,4.273V6.5a3.212,3.212,0,0,0,2.366,3.086,24.618,24.618,0,1,1-13.3,0A3.213,3.213,0,0,0,29.462,6.5V4.274a3.214,3.214,0,0,0-4.02-3.109,33.181,33.181,0,1,0,16.569-.009A3.205,3.205,0,0,0,38.025,4.273Z" transform="translate(-0.562 -1.055)"/>
-                </svg>   
+        <div class = "container">
+            <div class = "navbar">
+                <img src="https://img.icons8.com/fluent/240/000000/home.png" class="logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="">About Us</a></li>
+                        <li><a href="./projects.html">Proyectos</a></li>
+                        <li><a href="">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+                <img src="https://img.icons8.com/small/256/000000/menu.png" class = "menu-icon" onclick="togglemenu()">
             </div>
-
-            <ul class="header-nav__list">
-                <li class="header-nav__list__item"> <a href="./index.html">Home</a> </li>
-                <li class="header-nav__list__item"> <a href="">About us</a> </li>
-                <li class="header-nav__list__item"> <a href="./projects.html">Projects</a> </li>
-                <li class="header-nav__list__item"> <a href="">Goals</a> </li>
-            </ul>
-            <div class="header-nav__theme">
-                <span>Theme</span>
-                <button>O</button>
-            </div>
-        </nav>
+            
+        </div>
+        
     </header>
-    <main>
-        <div class = "main-background">
-            <img class = "main-background__img" src="https://i.pinimg.com/originals/04/ef/5e/04ef5e1743f2123165f573616c533885.jpg" alt="mountain">
-            <div id="moving-img" class="main-background__presentation">
-                <img src="https://static.photocdn.pt/images/articles/2019/08/07/images/articles/2019/07/31/best_linkedin_photos.jpg" alt="Profile picture">
-                <img src="http://img-cdn.tid.al/o/b4d6ebd22e3e7e869dbc043eb2bce3a71caf6721.jpg" alt="Profile picture">
-                <img src="https://www.themobileheadshot.com/wp-content/uploads/2021/03/Studio-Session-017-Edit.jpg" alt="Profile picture">
+    
+    <section id="first-area">
+        <div class="image-area">
+            <div class="image-content-box">
+                <h1 class="main-title">Systems and Software Engineer Students</h1>
             </div>
         </div>
+    </section>
+    <div class="middle-section">
+        <div class="titulo-about">
+            <h1 class="about-us-tittle">About us.</h1>
+        </div>
+        <div class="about-us">
+            <img class="first-profile-image" src="http://img-cdn.tid.al/o/b4d6ebd22e3e7e869dbc043eb2bce3a71caf6721.jpg" alt="my-face">
+            <p class="primer-parrafo">Hola, mi nombre es Fernando Cuervo y soy estudiante de Ingenieria en Sistemas Computacionales.</p>
+        </div>
+    </div>
 
-        <div class="main-presentation">
-            <h1> Description </h1>
-            <div class = "main-presentation__description">
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit exercitationem, voluptas neque tempora vero illo asperiores rerum consectetur temporibus incidunt, quos sit inventore nesciunt aperiam placeat quod consequatur? Aliquid molestiae mollitia voluptate non aut repudiandae porro itaque accusantium provident nobis sint quisquam, incidunt cumque unde voluptatibus, ipsa quae ea esse adipisci, neque dolorum placeat autem sunt et? Minus reiciendis impedit consectetur veniam atque totam, sequi ipsam facere error deserunt dolorem dicta accusantium voluptatem possimus enim aspernatur pariatur recusandae amet autem nam dolor ea? Deleniti eius nemo id. Labore, nulla ad enim repellendus ipsa dignissimos odit facere illum quod, esse fuga.
-                </p>
+    <div class="second-middle-section">
+        <div class="about-us-segundo">
+            <p class="segundo-parrafo">Hola, mi nombre es Fernando Cuervo y soy estudiante de Ingenieria en Sistemas Computacionales.</p>
+            <img class="second-profile-image" src="http://img-cdn.tid.al/o/b4d6ebd22e3e7e869dbc043eb2bce3a71caf6721.jpg" alt="my-second-face">
+        </div>
+    </div>
+    <div class="third-section-tittle">
+        <h1 class="third-section-main-tittle">Projects.</h1>
+    </div>
+    <div class="third-section">
+        <div class="primer-tarjeta">
+            <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Azarikh.jpg" alt="img1" class="primer-imagen-tarjeta">
+            <p class="descripcion-primer-tarjeta">Este es el primer proyecto</p>
+        </div>
+        <div class="primer-tarjeta">
+            <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Jeremy-Laplatine.jpg" alt="img1" class="primer-imagen-tarjeta">
+            <p class="descripcion-primer-tarjeta">Este es el primer proyecto</p>
+        </div>
+        <div class="primer-tarjeta">
+            <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Leonardo-Isidro.jpg" alt="img1" class="primer-imagen-tarjeta">
+            <p class="descripcion-primer-tarjeta">Este es el primer proyecto</p>
+        </div>
+        <div class="primer-tarjeta">
+            <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Jeremy-Laplatine.jpg" alt="img1" class="primer-imagen-tarjeta">
+            <p class="descripcion-primer-tarjeta">Este es el primer proyecto</p>
+        </div>
+    </div>
+    <div class="contact-section-tittle">
+        <h1 class="contact-section-h1">Contact.</h1>
+    </div>
+    <div class="fourth-section">
+        <div class="primer-tarjeta-contacto">
+            <div class="nombre-de-contacto">
+                <h3 class="primer-tarjeta-contacto-titulo">Fernando Cuervo</h3>
             </div>
-            <h1> Projects </h1>
-            <div class="main-presentation__projects">
-                <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Azarikh.jpg" alt="img1">
-                <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Jeremy-Laplatine.jpg" alt="img2">
-                <img src="https://www.thepixellab.net/wp-content/uploads/2017/11/C4D-3D-Cube-Model-Leonardo-Isidro.jpg" alt="img3">
-            </div>
-            <h1> Contact </h1>
-            <div class="main-presentation__contact">
-                <img src="https://embajadoresalumni.udd.cl/files/2018/04/linkedin.png" alt="linkedin">
-                <img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github">
-                <img src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" alt="correo">
+            <div class="imagenes-contacto-global">
+                <img src="https://embajadoresalumni.udd.cl/files/2018/04/linkedin.png" alt="linkedin" class="imagenes-contacto">
+                <img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github" class="imagenes-contacto">
+                <img src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" alt="correo" class="imagenes-contacto">
             </div>
         </div>
-    </main>
-    <footer>
-        <div class="footer-wrapper">
+        <div class="segunda-tarjeta-contacto">
+            <div class="nombre-de-contacto">
+                <h3 class="segunda-tarjeta-contacto-titulo">Rafael Gomez</h3>
+            </div>
+            <div class="imagenes-contato-global-2">
+                <img src="https://embajadoresalumni.udd.cl/files/2018/04/linkedin.png" alt="linkedin" class="imagenes-contacto">
+                <img src="https://image.flaticon.com/icons/png/512/25/25231.png" alt="github" class="imagenes-contacto">
+                <img src="https://cdn.icon-icons.com/icons2/1826/PNG/512/4202011emailgmaillogomailsocialsocialmedia-115677_115624.png" alt="correo" class="imagenes-contacto">
+            </div>
+        </div>
+    </div>
+    <div class="bottom-part"></div>
+    
 
-        </div>
-    </footer>
+
+    <script>
+        var menuList = document.getElementById("menuList");
+
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu(){
+            if(menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "130px";
+                }
+            else
+                {
+                    menuList.style.maxHeight = "0px";
+                }
+        }
+    </script>
     
 </body>
 </html>

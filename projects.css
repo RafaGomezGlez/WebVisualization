@@ -3,6 +3,9 @@
     margin: 0;
     padding: 0;
 }
+.html {
+        font-size: 62.5%;
+}
 /* Styles for header section using BEM */
 .header-nav {
     margin-top: 0px;
