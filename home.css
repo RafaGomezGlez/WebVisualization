@@ -2,7 +2,6 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* font-family: Arial, Helvetica, sans-serif; */
     font-family: 'Abel', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Shadows Into Light', cursive;
@@ -26,7 +25,7 @@ body{
     width: 100%;
     display: flex;
     align-items: center;
-    height: 90px;
+    height: 5.625rem;
 }
 .logo{
     width: 50px;
@@ -81,9 +80,9 @@ nav ul li:hover::after{
 .image-content-box{
     width: 56%;
     position: absolute;  
-    left: 50%;                        /* horizontal alignment */
-    top: 50%;                         /* vertical alignment */
-    transform: translate(-50%, -50%); /* precise centering; see link below */
+    left: 50%;                        
+    top: 50%;                         
+    transform: translate(-50%, -50%); 
 }
 .main-title{
     text-align: center;
@@ -99,7 +98,7 @@ nav ul li:hover::after{
 .middle-section{
     padding: 3rem;
 }
-.titulo-about{
+.about-tittle{
     text-align: center;
     color: #222831;
 }
@@ -117,7 +116,7 @@ nav ul li:hover::after{
     width: 23rem;
     box-shadow: 10px 10px 5px grey;
 }
-.primer-parrafo{
+.first-paragraph{
     width: 40rem;
     text-align: right;
     font-family: 'Varela Round', sans-serif;
@@ -127,12 +126,12 @@ nav ul li:hover::after{
 .second-middle-section{
     padding: 3rem;
 }
-.about-us-segundo{
+.second-about-us{
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.segundo-parrafo{
+.second-paragraph{
     width: 40rem;
     text-align: left;
     font-family: 'Varela Round', sans-serif;
@@ -142,6 +141,7 @@ nav ul li:hover::after{
     width: 23rem;
     box-shadow: 10px 10px 5px grey;
 }
+
 .third-section-tittle{
     display: flex;
     align-items: center;
@@ -156,7 +156,7 @@ nav ul li:hover::after{
     justify-content: center;
     justify-content: space-around;
 }
-.primer-tarjeta{
+.cards{
     display: flex;
     flex-direction: column;
     padding: 0.5rem;
@@ -165,10 +165,10 @@ nav ul li:hover::after{
     transition: 0.3s;
     margin: 0.7rem;
 }
-.primer-tarjeta:hover{
+.cards:hover{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-.primer-imagen-tarjeta{
+.card-image{
     width: 20rem
 }
 .contact-section-tittle{
@@ -186,18 +186,18 @@ nav ul li:hover::after{
     align-items: center;
     justify-content: center; 
 }
-.primer-tarjeta-contacto, .segunda-tarjeta-contacto{
+.first-contact-card, .second-contact-card{
     display: flex;
     width: 30rem;
     flex-direction: column;
     background-color: #eeeeee;
     padding-bottom: 3rem;
 }
-.primer-tarjeta-contacto-titulo, .segunda-tarjeta-contacto-titulo{
+.first-contact-card-tittle, .second-contact-card-tittle{
     text-align: center;
     padding-bottom: 1.5rem;
 }
-.imagenes-contacto-global, .imagenes-contato-global-2{
+.global-contact-images, .global-contact-images-2{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -205,7 +205,7 @@ nav ul li:hover::after{
     padding: 0 4.375rem 0 4.375rem;
     justify-content: space-between;
 }
-.imagenes-contacto{
+.social-images{
     width: 4rem;
     cursor: pointer;
 }
@@ -256,17 +256,17 @@ nav ul li:hover::after{
         width: 18rem;
         justify-content: center;
     }
-    .primer-parrafo{
+    .first-paragraph{
         padding-top: 2rem;
         text-align: center;
         width: 20rem;
     }
-    .about-us-segundo{
+    .second-about-us{
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    .segundo-parrafo{
+    .second-paragraph{
         padding-top: 2rem;
         text-align: center;
         width: 20rem;
