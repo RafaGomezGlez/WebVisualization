@@ -178,7 +178,6 @@ nav ul li:hover::after{
     padding-top: 2rem;
     padding-bottom: 2rem;
 }
-
 .fourth-section{
     display: flex;
     flex-direction: row;
