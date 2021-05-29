@@ -153,4 +153,5 @@ nav ul li:hover::after{
     .first-project-card-image, .second-project-card-image, .third-project-card-image{
         width: 80%;
     }
+    
 }
