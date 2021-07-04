@@ -37,8 +37,9 @@ function generateLabelsFromTable(quantity)
 }
 
 function sendData() {
-
+    // 
     var sortValue = (document.getElementById("sort-method").value);
+    //
     var quantityValue = document.getElementById("quantityNumbers").value;
     var delayValue = document.getElementById("delay").value;
 
