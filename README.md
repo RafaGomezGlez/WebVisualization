@@ -14,4 +14,6 @@ The website will include:
 - chart js
 > npm install chart.js
 - Microsoft Azure
+- sweetalert2
+> npm install sweetalert2
 

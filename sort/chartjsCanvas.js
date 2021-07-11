@@ -25,11 +25,11 @@ var myChart = new Chart(ctx, {
                     scales: {
                         x: {
                             display: true,
-                            ticks: {
-                                font: {
-                                    size: 20,
-                                }
-                            }
+                            // ticks: {
+                            //     font: {
+                            //         size: 20,
+                            //     }
+                            // }
                          },
                          y: {
                             display: false,
