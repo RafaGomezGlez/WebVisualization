@@ -70,7 +70,7 @@ nav ul li:hover::after{
     position: relative;
 }
 #first-area .image-area{
-    background-image: url(computer-code-software.jpg);
+    background-image: url(./images/computer-code-software.jpg);
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
