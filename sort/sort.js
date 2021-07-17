@@ -1,4 +1,3 @@
-
 function swap(arr, j) {
     let tmp = arr[j];
     arr[j] = arr[j + 1];
@@ -36,8 +35,15 @@ function generateLabelsFromTable(quantity, valoresDespues)
     for (let i = 0; i < quantity; i++){
         labels.push(valoresDespues[i]);
     }
-    console.log(labels);
     return labels;
+}
+function generateColorValues(numberOfColors){
+    let color = 'rgb(255, 197, 82)';
+    let colorArray = [];
+    for(let i = 0; i < numberOfColors.length; i++){
+        colorArray.push(color);
+    }
+    return colorArray;
 }
 
 function sendData() {
@@ -46,6 +52,14 @@ function sendData() {
     // Selected quantity of numbers
     var quantityValue = document.getElementById("quantityNumbers").value;
     var delayValue = document.getElementById("delay").value;
+    
+    if(quantityValue < 6 || quantityValue > 50) {
+        alert("Please select numbers between 6 and 50");
+        return;
+    }
+    
+
+
     //Generate random data
     myChart.data.datasets.forEach((dataset) => {
         dataset.data = (randomData(quantityValue));
@@ -54,13 +68,11 @@ function sendData() {
     let generatedValues = myChart.data.datasets[0].data
     // Set "generatedValues" to data labels
     myChart.data.labels = generateLabelsFromTable(quantityValue, generatedValues);
-    // Update cahrt bar colors to yellow
-    myChart.data.datasets[0].backgroundColor = ['rgb(255, 197, 82)',
-                                                'rgb(255, 197, 82)',
-                                                'rgb(255, 197, 82)',
-                                                'rgb(255, 197, 82)',
-                                                'rgb(255, 197, 82)',
-                                                'rgb(255, 197, 82)'];
+
+    // Update chart bar colors to yellow
+    myChart.data.datasets[0].backgroundColor = generateColorValues(generatedValues);
+    console.log(myChart.data.datasets[0].backgroundColor);
+
     //Update
     myChart.update();
     switch (sortValue) {
@@ -126,6 +138,60 @@ function mergeSort(){
 }
 
 function quickSort(){
-    console.log("quickSort")
+
 }
 
+async function insertionSort(){
+    var labels = myChart.data.labels;
+    var data = myChart.data.datasets[0].data;
+    var colors = myChart.data.datasets[0].backgroundColor;
+
+    // Green color to the first bar
+    colors[0] = 'rgb(0, 255, 0)';
+    updateChartDelayed(labels.slice(0), data.slice(0), colors.slice(0));
+
+    for(let i = 1; i < data.length; i++){
+        let current = data[i];
+        let j = i - 1;
+        // Update color to purple
+        colors[i] = 'rgb(217, 2, 250)';
+
+        updateChartDelayed(labels.slice(0), data.slice(0), colors.slice(0));
+        // Wait 1.5 sec
+        await new Promise((resolve) =>
+                setTimeout(() => {
+                    resolve();
+                }, 1500)
+            );
+
+        while((j >= 0) && (current < data[j])){
+            colors[j] = 'rgb(217, 2, 250)';
+            data[j+1] = data[j];
+            labels[j+1] = labels[j];
+            updateChartDelayed(labels.slice(0), data.slice(0), colors.slice(0));
+            j--;
+            // Wait half a second
+            await new Promise((resolve) =>
+                setTimeout(() => {
+                    resolve();
+                }, 500)
+            );
+
+            // change color to green for the sorted section
+            for(let k = i; k >= 0; k--){
+                colors[k] = 'rgb(0, 255, 0)';
+                data[j+1] = current;
+                labels[j+1] = current;
+                updateChartDelayed(labels.slice(0), data.slice(0), colors.slice(0));
+            }
+        }
+        // Wait half a second
+        await new Promise((resolve) =>
+            setTimeout(() => {
+                resolve();
+            }, 500)
+        );
+        colors[i] = 'rgb(0, 255, 0)';
+        updateChartDelayed(labels.slice(0), data.slice(0), colors.slice(0));
+    }
+}
