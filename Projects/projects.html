@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="./projects.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@500&family=Shadows+Into+Light&family=Varela+Round&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class = "container">
+            <div class = "navbar">
+                <img src="https://img.icons8.com/fluent/240/000000/home.png" class="logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href= "../index.html">About Us</a></li>
+                        <li><a href="./projects.html">Proyectos</a></li>
+                        <li><a href="../index.html">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+                <img src="https://img.icons8.com/small/256/000000/menu.png" class = "menu-icon" onclick="togglemenu()">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="main-tittle-box">
+            <h1 class="main-tittle">Projects</h1>
+        </div>
+        <div class="projects-cards" onclick="location.href='./sort/sort.html'">
+            <div class="first-project-card">
+                <h2 class="first-project-card-tittle">Sorting Algorithms Visualization</h2>
+                <img src="../images/sorting-cards.png" class="first-project-card-image" alt="Sorting Algorithms">
+                <p class="first-project-card-paragraph">Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor</p>
+            </div>
+            <div class="second-project-card">
+                <h2 class="second-project-card-tittle">Files Search</h2>
+                <img src="../images/file-search.png" class="second-project-card-image" alt="Files Search">
+                <p class="second-project-card-paragraph">Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor</p>
+            </div>
+            <div class="third-project-card">
+                <h2 class="third-project-card-tittle">E-commerce</h2>
+                <img src="../images/e-commerce1.png" class="third-project-card-image" alt="E-commerce">
+                <p class="third-project-card-paragraph">Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor Lorem ipsum dolor sit amet Lorem ipsum dolor</p>
+            </div>
+        </div>
+    </main>
+    <footer class="bottom-part"></footer>
+    <script>
+        var menuList = document.getElementById("menuList");
+        menuList.style.maxHeight = "0px";
+        function togglemenu(){
+            if(menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "130px";
+                }
+            else
+                {
+                    menuList.style.maxHeight = "0px";
+                }
+        }
+    </script>
+</body>
+</html>

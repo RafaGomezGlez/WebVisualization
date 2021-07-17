@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort</title>
+    <link rel="stylesheet" href="./sort.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Roboto:wght@500&family=Shadows+Into+Light&family=Varela+Round&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.js"></script>
+</head>
+<body>
+    <script src="./sort.js"></script>
+    
+    <header>
+    
+        <div class = "container">
+            <div class = "navbar">
+                <img src="https://img.icons8.com/fluent/240/000000/home.png" class="logo">
+                <nav>
+                    <ul id="menuList">
+                        <li><a href="../../index.html">Inicio</a></li>
+                        <li><a href= "../../index.html">About Us</a></li>
+                        <li><a href="../projects.html">Proyectos</a></li>
+                        <li><a href="../../index.html">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+                <img src="https://img.icons8.com/small/256/000000/menu.png" class = "menu-icon" onclick="togglemenu()">
+            </div>
+        </div>
+    </header>
+    <script src = "./responsive.js"></script>
+
+    <main>
+        <div class="main-secondHead">
+            <form class="main-secondHead__form">
+                <div class="first-option">
+                    <label for="sort-method" class="main-secondHead__form__label">Sort method</label>
+                        <select name = "main-secondHead__form" id="sort-method">
+                            <option value="insertionSort"> Insertion Sort</option>
+                            <option value="bubbleSort"> Bubble Sort</option>
+                            <option value="mergeSort"> Merge Sort</option>
+                            <option value="quickSort"> Quick Sort</option>
+                        </select>
+                </div>
+                <div class="second-option">
+                    <label for="quantityNumbers" class="main-secondHead__form__label"> Quantity of numbers</label>
+                        <input type="number" min="6" max="50" id ="quantityNumbers">
+                </div>
+                <div class="third-option">
+                    <label for="delay" class="main-secondHead__form__label"> Delay</label>
+                        <input type="number" min="0" id = "delay">
+                </div>
+            </form>
+        </div>
+        <div class="main-instructions">
+            <p class="main-instructions-p">Press the button to start  the sorting algorithm with the selected parameters</p>
+        </div>
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+        <script src="chartjsCanvas.js"></script>
+        
+        <div class = "main-button">
+            <button id="submit" type="submit" class="sort-button" value="Submit" onclick="sendData()">
+                Sort
+            </button>
+        </div>
+        
+    </main>
+    
+    <footer class="bottom-part"></footer>
+    
+</body>
+</html>
