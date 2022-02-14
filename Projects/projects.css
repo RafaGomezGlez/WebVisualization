@@ -3,8 +3,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Abel', sans-serif;
-    font-family: 'Roboto', sans-serif;
-    font-family: 'Shadows Into Light', cursive;
     font-family: 'Varela Round', sans-serif;
 }
 body{
@@ -14,7 +12,9 @@ body{
     margin-top: 0px;
     margin-left: 0;
     list-style: none;
-    background-color: #eeeeee;
+    /* background-color: #eeeeee; */
+    background-color: #222831;
+    letter-spacing: 0.5px;
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -45,11 +45,12 @@ nav ul li{
     text-decoration: none;
     display: inline-block;
     margin-right: 80px;
-    
 }
 nav ul li a{
     text-decoration: none;
-    color: #000;
+    /* color: #000; */
+    color: #fff;
+
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
 }
@@ -107,7 +108,40 @@ nav ul li:hover::after{
 .first-project-card-paragraph, .second-project-card-paragraph, .third-project-card-paragraph{
     text-align: center;
     padding: 1rem 0.5rem 1rem 0.5rem;
+    font-size: 1rem;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
 }
+
+.portfolio-cards{
+    display: flex;
+    flex-direction: column;
+    padding: 0 7rem 3rem 7rem;
+    align-items: center;
+    gap: 12px;
+    
+}
+.fernando-card, .rafael-card{
+    display: flex;
+    flex-direction: row;
+    height: 80px;
+    width: 600px;
+    border-radius:10px;
+    border: 0.5px solid black;
+    background-color: #fff;
+    cursor: pointer;
+    
+}
+.fernando-card:hover, .rafael-card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.portfolio-cards-image{
+    width: 12%;
+    border-radius:30px;
+    margin-left: 10px;
+    align-items: flex-start;
+}
+
 .bottom-part{
     display: flex;
     background-color: #222831;
@@ -139,7 +173,7 @@ nav ul li:hover::after{
         overflow: hidden;
         transition: 0.5s;
     }
-    .projects-cards{
+    .projects-cards, .portfolio-cards{
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -152,6 +186,14 @@ nav ul li:hover::after{
     }
     .first-project-card-image, .second-project-card-image, .third-project-card-image{
         width: 80%;
+    }
+    .fernando-card, .rafael-card{
+        width: 100%;
+        height: 70px;
+        justify-content: center;
+    }
+    .portfolio-cards-image{
+        width: 50px;
     }
     
 }
